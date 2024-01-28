@@ -1,19 +1,35 @@
-<!-- characterList.html -->
+<!--characterList.html -->
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Rick and Morty Characters</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character List</title>
+    <!-- Подключение Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-<h1>Rick and Morty Characters</h1>
-<div th:each="character : ${characters}">
-    <a th:href="@{/character/{id}(id=${character.id})}">
-        <h2 th:text="${character.name}"></h2>
-        <img th:src="${character.image}" style="width:150px;height:150px;"/>
-        <p>Status: <span th:text="${character.status}"></span></p>
-        <p>Species: <span th:text="${character.species}"></span></p>
-    </a>
+<div class="container">
+    <div class="row">
+
+        <div th:each="character : ${characters}" class="col-md-4 mb-4">
+            <div class="card">
+                <img class="card-img-top" th:src="${character.image}" alt="Character Image">
+                <div class="card-body">
+                    <h5 class="card-title" th:text="${character.name}"></h5>
+                    <p class="card-text">
+
+                        <span th:text="|Status: ${character.status} - Species: ${character.species}|"></span>
+                    </p>
+                    <a th:href="'/character/' + ${character.id}" class="btn btn-primary">View Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
