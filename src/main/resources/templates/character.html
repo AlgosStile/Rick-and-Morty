@@ -1,0 +1,16 @@
+<!-- character.html -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Rick and Morty Character Details</title>
+</head>
+<body>
+<h1 th:text="${character.name}"></h1>
+<img th:src="${character.image}" style="width:150px;height:150px;"/>
+<p>Status: <span th:text="${character.status}"></span></p>
+<p>Species: <span th:text="${character.species}"></span></p>
+<p>Type: <span th:text="${character.type}"></span></p>
+<p>Gender: <span th:text="${character.gender}"></span></p>
+</body>
+</html>

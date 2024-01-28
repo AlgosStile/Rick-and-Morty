@@ -1,0 +1,19 @@
+<!-- characterList.html -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Rick and Morty Characters</title>
+</head>
+<body>
+<h1>Rick and Morty Characters</h1>
+<div th:each="character : ${characters}">
+    <a th:href="@{/character/{id}(id=${character.id})}">
+        <h2 th:text="${character.name}"></h2>
+        <img th:src="${character.image}" style="width:150px;height:150px;"/>
+        <p>Status: <span th:text="${character.status}"></span></p>
+        <p>Species: <span th:text="${character.species}"></span></p>
+    </a>
+</div>
+</body>
+</html>
