@@ -11,11 +11,11 @@
 
 ## Установка
 1. Установите зависимости (см. pom.xml):
-   spring-boot-starter-data-jpa
-   spring-boot-starter-thymeleaf
-   spring-boot-starter-web
-   h2
-   lombok
+   - spring-boot-starter-data-jpa
+   - spring-boot-starter-thymeleaf
+   - spring-boot-starter-web
+   - h2
+   - lombok
 2. Склонируйте текущий репозиторий
 3. Перейдите в каталог проекта:
    bash
