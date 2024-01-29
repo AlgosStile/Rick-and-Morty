@@ -8,6 +8,7 @@ import org.example.rickandmorti.domain.Characters;
 public interface ServiceApi {
     /**
      * Получает список персонажей из внешнего API.
+     *
      * @return объект Characters с информацией о персонажах
      */
     Characters getAllCharactersFromApi();

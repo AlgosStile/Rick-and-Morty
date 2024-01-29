@@ -32,6 +32,7 @@ public class RickAmdMortiApiApplication {
     public HttpHeaders headers() {
         return new HttpHeaders();
     }
+
     /**
      * Точка входа в приложение.
      */
