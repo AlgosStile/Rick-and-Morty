@@ -7,6 +7,14 @@
     <title>Character Details</title>
     <!-- Подключение Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .card-img-top {
+            height: 600px;
+            width: auto;
+            margin: 0 auto;
+            display: block;
+        }
+    </style>
 </head>
 <body>
 <div class="container">
@@ -15,7 +23,6 @@
         <div class="card-body">
             <h5 class="card-title" th:text="${character.name}"></h5>
             <p class="card-text">
-
                 <span th:text="|Status: ${character.status} - Species: ${character.species} - Gender: ${character.gender} - Created: ${#dates.format(character.created, 'dd/MM/yyyy')}|"></span>
             </p>
             <a th:href="@{/characters}" class="btn btn-secondary">Back to Character List</a>
