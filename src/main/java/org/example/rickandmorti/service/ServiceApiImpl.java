@@ -1,7 +1,5 @@
 package org.example.rickandmorti.service;
 
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
 import org.example.rickandmorti.domain.Characters;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpMethod;
@@ -19,6 +17,7 @@ public class ServiceApiImpl implements ServiceApi {
     private String apiCharactersUrl;
 
     private final RestTemplate restTemplate;
+
     /**
      * Конструктор с параметром restTemplate.
      *
@@ -27,6 +26,7 @@ public class ServiceApiImpl implements ServiceApi {
     public ServiceApiImpl(RestTemplate restTemplate) {
         this.restTemplate = restTemplate;
     }
+
     /**
      * Получает список персонажей из внешнего API.
      *
